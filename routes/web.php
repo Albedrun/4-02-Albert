@@ -14,17 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
+        "title" => "About",
         "nama" => "Albert Jonathan Santosa",
         "email" => "3103120014@student.smktelkom-pwt.sch.id",
-        "gambar" => "Roblox 08_01_2022 13_15_18.png"
+        "gambar" => "profil.png"
     ]);
 });
 
 Route::get('/gallery', function () {
-    return view('gallery');
+    return view('gallery', [
+        "title" => "Gallery"
+    ]);
 });
